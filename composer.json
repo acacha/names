@@ -1,0 +1,19 @@
+{
+    "name": "acacha/names",
+    "description": "Provides alternative names to Laravel models.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sergi Tur Badenas",
+            "email": "sergiturbadenas@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Acacha\\Names\\": "src/"
+        }
+    },
+    "require": {
+        "laravel/framework": "^5.3"
+    }
+}
