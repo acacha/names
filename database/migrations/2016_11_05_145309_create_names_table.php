@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+ * Class CreateNamesTable
+ */
 class CreateNamesTable extends Migration
 {
     /**
@@ -15,12 +18,12 @@ class CreateNamesTable extends Migration
     {
         Schema::create('names', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('shortname');
-            $table->string('fullname');
-            $table->string('nickname');
-            $table->string('code');
-            $table->text('description');
-            $table->text('notes');
+            $table->string('shortname')->nullable();
+            $table->string('fullname')->nullable();
+            $table->string('nickname')->nullable();
+            $table->string('code')->nullable();
+            $table->text('description')->nullable();
+            $table->text('notes')->nullable();
             $table->morphs('nameable');
             $table->timestamps();
         });

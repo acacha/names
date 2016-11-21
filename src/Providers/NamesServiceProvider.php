@@ -4,6 +4,10 @@ namespace Acacha\Names\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class NamesServiceProvider
+ * @package Acacha\Names\Providers
+ */
 class NamesServiceProvider extends ServiceProvider
 {
     /**
@@ -15,13 +19,19 @@ class NamesServiceProvider extends ServiceProvider
         }
     }
 
+    /**
+     * Bootstrap the application services.
+     */
     public function boot() {
         $this->publishMigrations();
     }
 
+    /**
+     * Publish migrations
+     */
     private function publishMigrations()
     {
-        $this->loadMigrationsFrom('NAMES_PATH'.'/database/migrations');
+        $this->loadMigrationsFrom(NAMES_PATH.'/database/migrations');
     }
 
 }

@@ -27,8 +27,7 @@ You only have to add trait **Acacha\Names\Nameable** to you model:
 
 ```php
 class MyModel extends Model {
-    user Nameable;
-    
+    use Nameable;    
     ...
 }
 ```
