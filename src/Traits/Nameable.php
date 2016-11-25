@@ -2,6 +2,7 @@
 
 namespace Acacha\Names\Traits;
 
+use Acacha\Names\Exceptions\ModelHaveNoKey;
 use Acacha\Names\Name;
 
 /**
@@ -103,7 +104,7 @@ trait Nameable
      */
     protected function setAttributeByName($attributes)
     {
-        if ($this->getKey() == null) throw new \Exception();
+        if ($this->getKey() == null) throw new ModelHaveNoKey();
 
         $name = Name::firstOrCreate([
             'nameable_id' => $this->getKey(),
