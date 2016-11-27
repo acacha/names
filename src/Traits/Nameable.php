@@ -57,7 +57,7 @@ trait Nameable
      * @param  string  $value
      * @return void
      */
-    public function setCodenameAttribute($value)
+    public function setCodeAttribute($value)
     {
         $this->setAttributeByName(['code' => $value]);
     }
